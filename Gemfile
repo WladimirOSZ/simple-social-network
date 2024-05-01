@@ -39,10 +39,15 @@ gem "rack-cors"
 gem 'devise'
 gem 'devise-jwt'
 gem 'jsonapi-serializer'
+gem 'pg'
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'rspec-rails'
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+end
+
+group :test do
+  gem 'capybara'
 end
 
 group :development do
